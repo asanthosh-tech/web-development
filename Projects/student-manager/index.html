@@ -4,29 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>Student Manager</title>
   <style>
-  input,button{
-    display: block;
-    margin: 6px;
-    padding: 4px 8px;
-  }
+    h1{
+      text-align: center;
+    }
+    input{
+      display: block;
+      padding: 4px 8px;
+    }
+    button{
+      padding: 4px 8px;
+      margin: 10px;
+    }
   </style>
 </head>
 <body>
-  <h1 style="text-align:center">
-    Student Search Application
-  </h1>
-  <input id="name">
-  <button id="addbtn">Add</button>
-  <input id="searchname">
-  <button id="searchbtn">Search</button>
-  <button id="passbtn">Passed</button>
-  <button id="allbtn">All</button>
+  <h1>Student Manager</h1>
+  <div class="con">
+    <input id="name" placeholder="Enter student name">
+    <button id="addbtn">Add</button>
+    <button id="passbtn">Passed</button>
+  </div>
   <h4 id="count">Total Students:</h4>
-  <p id="passcount">Passed students:</p>
-  <h4 id="result">Search Result:</h4>
   <ul id="list"></ul>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
