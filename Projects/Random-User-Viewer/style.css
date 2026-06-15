@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  text-align: center;
+  border: 2px solid black;
+  margin: 50px auto;
+  width: 350px;
+  height: 600px;
+}
+#getbtn {
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: white;
+  border: 2px solid black;
+  text-transform: uppercase;
+  background-color: #64c4ef;
+  letter-spacing: 1px;
+  margin: 5px auto;
+  display: block;
+}
+#status {
+  display: block;
+  margin: 5px auto;
+  line-height: 2rem;
+  word-spacing: 3px;
+  text-align: center;
+}
+td {
+  border: 2px solid black;
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  margin: 0px;
+  width: 250px;
+  height: 250px;
+}
+td:nth-child(1) {
+  font-weight: bold;
+}
