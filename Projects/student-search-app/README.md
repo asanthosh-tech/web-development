@@ -1,46 +1,50 @@
-Student Search Application
+Student Search App
 
 Description
 
-A JavaScript application that allows users to add students, search for students by name, view all students, and display passed students.
+A JavaScript application that allows users to add students, search students by name, view all students, display passed students, and store data using Local Storage so that information remains available after page refresh.
 
 Features
 
-- Add students
+- Add students with random marks
 - Search student by name
 - View all students
-- Show passed students
-- Display student count
-- Display passed student count
+- View passed students
+- Remove the last added student
+- Display total student count
+- Store student data using Local Storage
+- Automatically load saved data after refresh
 
 Technologies Used
 
 - HTML
+- CSS
 - JavaScript
+- Local Storage API
 
-Concepts Practiced
 
-- Arrays
-- Objects
-- find()
-- filter()
-- map()
-- forEach()
-- DOM Manipulation
-- Event Handling
+Project Flow
 
-How to Run
+Add Student
+→ Create Student Object
+→ Save to Array
+→ Save to Local Storage
 
-1. Download the project.
-2. Open "index.html" in a browser.
-3. Add students.
-4. Search for students using the search box.
-5. Use the buttons to view passed students or all students.
+Search Student
+→ Read Student Array
+→ find()
+→ Display Result
 
-Future Improvements
+Passed Students
+→ filter()
+→ Display Matching Students
 
-- Case-insensitive search
-- Remove student feature
-- Edit student details
-- Local Storage support
-- Sorting students by marks
+Page Refresh
+→ Load Local Storage
+→ Convert Data Using JSON.parse()
+→ Restore Student Data
+
+
+Learning Outcome
+
+This project helped practice Arrays, Objects, DOM Manipulation, Event Handling, Local Storage, JSON Conversion, Search Functionality, and Data Persistence in JavaScript.
