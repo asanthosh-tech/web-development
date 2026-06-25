@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.css">
+  <title>TODOs List</title>
+</head>
+<body>
+  <nav class="navbar bg-dark">
+    <div class="container">
+      <span class="text-center navbar-brand text-white">TODOs List</span>
+    </div>
+  </nav>
+  <div class="container mt-4 bg-dark-subtle">
+    <label for="task" class="form-label mt-3">Add Task</label>
+    <input type="text" class="form-control" id="task" placeholder="Add Task">
+
+    <label for="desc" class="form-label mt-3">Description</label>
+    <textarea type="text" id="desc" class="form-control form-text" placeholder="Describe the task"></textarea>
+    <div class="row">
+      <button id="addbtn" class="btn btn-primary col m-3">Add Item</button>
+      <button id="clearbtn" class="btn btn-danger col m-3">CLEAR ITEMS</button>
+    </div>
+  </div>
+  <div class="container bg-dark-subtle mt-4 mb-4 p-4">
+  <h2 class="mt-2 mb-4">Your Items</h2>
+    <table class="table ">
+      <thead>
+        <tr class="row-cols-4">
+          <th scope="col">S.No</th>
+          <th scope="col">TITLE</th>
+          <th scope="col">Description</th>
+          <th scope="col">ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+</body>
+<script>
+  //accessing elements
+  const task = document.getElementById("task")
+  const desc = document.getElementById("desc")
+  const tbody = document.getElementById("tbody")
+  const addbtn = document.getElementById("addbtn")
+  const removebtn = document.getElementById("remove")
+  const clearbtn = document.getElementById("clearbtn")
+
+  //initialize Array
+  let todos = JSON.parse(localStorage.getItem("todos")) || []
+
+  function savetodos() {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }
+  function displaytodos() {
+    tbody.innerHTML = ""
+    console.log(typeof(todos))
+    todos.forEach((i, index)=> {
+      tbody.innerHTML += `
+      <tr>
+      <th scope="row">${index+1}</th>
+      <td>${i.task}</td>
+      <td>${i.desc}</td>
+      <td><button class="btn btn-danger remove"
+      onclick="removeitem(${index})">Delete</button></td>
+      </tr>
+      `
+    })
+  }
+  function add() {
+    if (task.value.trim() && desc.value.trim()) {
+      let taskobj = {
+        task: task.value,
+        desc: desc.value
+      }
+      todos.push(taskobj)
+      savetodos();
+      task.value = ""
+      desc.value = ""
+      console.log("added")
+    }
+    displaytodos();
+  }
+  function removeitem(index) {
+    todos.splice(index, 1)
+    savetodos()
+    displaytodos()
+  }
+  function clearall() {
+    if (todos.length) {
+      if (confirm("This will clear all tasks.. Are you sure?")) {
+        todos = []
+        savetodos()
+        displaytodos()
+      }
+    }
+  }
+
+  displaytodos();
+  addbtn.addEventListener("click", add)
+  clearbtn.addEventListener("click", clearall)
+  desc.addEventListener("keypress", add)
+</script>
+</html>
