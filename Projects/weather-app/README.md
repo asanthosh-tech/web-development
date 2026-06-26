@@ -1,40 +1,40 @@
-Weather App
+# College Management Dashboard (Bootstrap UI)
 
-Description
+A simple College Management Dashboard UI created using Bootstrap 5.
 
-A web application that fetches real-time weather information for any city and displays temperature, humidity, weather condition, and weather icon.
+> Note: This project is created only for Bootstrap practice and UI design. It does not include JavaScript functionality or backend features.
 
-Features
+## Features
 
-- Search weather by city name
-- Display city, region, and country
-- Display temperature in Celsius
-- Display humidity percentage
-- Display weather condition
-- Display weather icon
-- Loading message while fetching data
-- Error handling for failed requests
-- Input validation
+- Responsive Navbar
+- Dashboard Statistics Cards
+- Student Registration Form
+- Student Data Table
+- Student Status Badges
+- Admission Progress Bar
+- Success Alert
 
-Technologies Used
+## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
-- Fetch API
+- HTML5
+- Bootstrap 5
 
-Concepts Practiced
+## Bootstrap Concepts Practiced
 
-- Async/Await
-- Fetch API
-- JSON Handling
-- DOM Manipulation
-- Event Listeners
-- Functions
-- Template Literals
-- Error Handling
+- Containers
+- Grid System
+- Cards
+- Forms
+- Buttons
+- Alerts
+- Tables
+- Badges
+- Progress Bars
+- Typography
+- Colors
+- Spacing Utilities
 
-API Used
+## Project Purpose
 
-https://wttr.in
+This project was built to practice Bootstrap layout, components, and responsive UI development without using JavaScript.
 
