@@ -29,10 +29,12 @@ function weatherinfo(condition, area) {
 }
 
 result.style.display = "none"
+status.style.display = "none"
 
 //get weather function
 async function getweather() {
   if (cityinput.value.trim()) {
+    status.className = "alert alert-info mt-3"
     status.style.display = "block"
     status.textContent = "Fetching info..."
     try {
@@ -48,14 +50,17 @@ async function getweather() {
       //calling display function
       weatherinfo(condition, area)
 
-      status.style.display = "none"
       cityinput.value = ""
+      status.className = "alert alert-success mt-3"
+      status.textContent = "Successfully Fetched"
     }
     catch(error) {
+      status.className = "alert alert-danger mt-3"
       status.innerHTML = `<b>Fetching Failed</b> ${error}`
       result.style.display = "none"
     }
   } else {
+    status.className = "alert alert-danger mt-3"
     status.textContent = "Enter the valid city name"
   }
 }
