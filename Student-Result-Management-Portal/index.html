@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Result Manager</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100">
+
+  <section id="navbar">
+    <nav class="fixed z-50  top-0 left-0 right-0 flex justify-evenly  items-center gap-16 md:gap-40 bg-gray-700 text-white p-2 text-xs md:text-2xl lg:text-4xl md:gap-x-16">
+      <div class="hidden md:block h-16 w-16 md:h-18 md:w-18  rounded-full border-2 border-black overflow-hidden shadow-2xl">
+        <img src="building.jpg">
+      </div>
+      <ul class="flex flex-row md:flex-row gap-2 md:gap-6 justify-center">
+        <li class="list-none no-underline ">
+          <a href="#home"
+            class="hover:underline opacity-70 transition duration-300
+            active:underline
+            active:text-sm
+            md:active:text-3xl
+            lg:active:text-5xl
+            active:opacity-100">Home</a>
+        </li>
+        <li class="list-none no-underline ">
+          <a href="#table"
+            class="hover:underline opacity-70 transition duration-500
+            active:underline
+            active:text-sm
+            md:active:text-3xl
+            lg:active:text-5xl
+            active:opacity-100">Results</a>
+        </li>
+        <li class="list-none no-underline ">
+          <a href="#toppers"
+            class="hover:underline opacity-70 transition duration-500
+            active:underline
+            active:text-sm
+            md:active:text-3xl
+            lg:active:text-5xl
+            active:opacity-100">Toppers</a>
+        </li>
+        <li class="list-none no-underline ">
+          <a href="#contact"
+            class="hover:underline opacity-70 transition duration-500
+            active:underline
+            active:text-sm
+            md:active:text-3xl
+            lg:active:text-5xl
+            active:opacity-100">Contact</a>
+        </li>
+      </ul>
+      <button class="bg-blue-400 px-4 py-1 border-2 border-black rounded-md hover:bg-blue-700">Login</button>
+    </nav>
+  </section>
+
+  <section id="home" class="w-screen h-screen">
+    <div class="container text-center  px-12 pt-52 flex justify-center items-center flex-col gap-6">
+      <b class="mt-16 font-extrabold text-2xl md:text-4xl lg:text-6xl">WELCOME</b>
+      <p class="text-sm lg:text-2xl xl:text-4xl md:text-xl font-bold">
+        to the
+      </p>
+      <b class="font-extrabold text-xl md:text-4xl lg:text-6xl ">AS Campus Management</b>
+      <a href="#form" class=" px-7 py-2 border-2 border-black bg-blue-300 no-underline hover:bg-blue-700 hover:cursor-pointer  rounded mt-12">Register Now</a>
+    </div>
+  </section>
+
+  <section id="statistics" class="m-4 rounded border border-gray-100 shadow-sm px-3 py-8 bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center underline uppercase mb-6">
+      Statistics
+    </h2>
+    <div class="flex flex-wrap gap-4 justify-center items-center">
+      <div class="bg-blue-200 w-44 h-44 md:w-56 md:h-56 p-2 pt-12 md:pt-16 border-2 border-black rounded-sm overflow-hidden shadow-md hover:shadow-lg hover:scale-110 transition duration-300">
+        <h3 class="font-bold text-center">Total Students</h3><br>
+        <p id="totalcount" class="text-center font-mono">
+          150
+        </p>
+      </div>
+      <div class="bg-blue-200 w-44 h-44 md:w-56 md:h-56 p-2 pt-12 md:pt-16 border-2 border-black rounded-sm overflow-hidden shadow-md hover:shadow-lg hover:scale-110 transition duration-300">
+        <h3 class="font-bold text-center">Passed Students</h3><br>
+        <p id="passedcount" class="text-center font-mono">
+          120
+        </p>
+      </div>
+      <div class="bg-blue-200 w-44 h-44 md:w-56 md:h-56 p-2 pt-12 md:pt-16 border-2 border-black rounded-sm overflow-hidden shadow-md hover:shadow-lg hover:scale-110 transition duration-300">
+        <h3 class="font-bold text-center">Failed Students</h3><br>
+        <p id="failedcount" class="text-center font-mono">
+          25
+        </p>
+      </div>
+      <div class="bg-blue-200 w-44 h-44 md:w-56 md:h-56 p-2 pt-12 md:pt-16 border-2 border-black rounded-sm overflow-hidden shadow-md hover:shadow-lg hover:scale-110 transition duration-300">
+        <h3 class="font-bold text-center">AVG CGPA</h3><br>
+        <p id="avgcgpa" class="text-center font-mono">
+          9.4
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="form" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Register
+    </h2>
+    <div class="p-2 flex flex-col justify-center items-center gap-6">
+      <h2 class=" mt-10 mb-2 text-center text-lg md:text-2xl lg:text-4xl font-bold">Registration Form</h2>
+      <form id="form1" class="container max-w-md border-2 border-black bg-gray-50 rounded-2xl py-4 px-5 flex flex-col justify-center gap-2">
+        <input id="studentname" placeholder="Enter Name" type="text" class="border-2 border-blue-300 px-6 py-2  rounded focus:outline-2 focus:outline-blue-700 focus:border-none w-full" required>
+        <input id="rollnumber" placeholder="Enter Roll Number" type="number" class="border-2 border-blue-300 px-6 py-2  rounded focus:outline-2 focus:outline-blue-700 focus:border-none w-full" required>
+        <select id="department" name="department" class=" rounded px-6 py-2 border-2 border-blue-300 outline-none focus:border-blue-700 w-full" required>
+          <option value="">Select Course</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="MECH">MECH</option>
+          <option value="CIVIL">CIVIL</option>
+          <option value="CHEMICAL">CHEMICAL</option>
+        </select>
+        <input id="cgpa" min="0.0" max="10.0" placeholder="Enter CGPA" type="number" class="border-2 border-blue-300 px-6 py-2  rounded focus:outline-2 focus:outline-blue-700 focus:border-none w-full" required>
+        <span class="mt-4">
+          <b>Result:&nbsp;</b>
+          <input id="pass" type="radio" name="result" value="Pass">
+          <label for="pass">
+            Pass&nbsp;
+          </label>
+          <input id="fail" type="radio" name="result" value="Fail">
+          <label for="fail">
+            Fail
+          </label>
+        </span>
+        <button type="button" id="addbtn" class="bg-green-300 px-4 py-1 border-2 border-black rounded-md hover:bg-green-700 font-thin tracking-wide mt-6">ADD
+        </button>
+        <button type="button" id="updatebtn" class="bg-yellow-300 px-4 py-1 border-2 border-black rounded-md hover:bg-yellow-700 font-thin tracking-wide mt-6">Update
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section id="cards" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Our Students
+    </h2>
+    <div id="student-cards" class="flex flex-wrap gap-4 justify-center items-center">
+    </div>
+  </section>
+
+  <section id="table" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Students Results
+    </h2>
+    <div class="overflow-x-auto">
+      <table class="mx-auto text-center border-collapse m-1 border-2 border-gray-500 rounded">
+        <thead class="bg-black text-white font-bold uppercase">
+          <tr>
+            <th class="px-2 py-1 border">Roll Number</th>
+            <th class="px-2 py-1 border">Name</th>
+            <th class="px-2 py-1 border">Department</th>
+            <th class="px-2 py-1 border">CGPA</th>
+            <th class="px-2 py-1 border">Result</th>
+            <th class="px-2 py-1 border">action</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toppers" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Our Toppers
+    </h2>
+    <div id="topstudents" class="flex flex-wrap gap-4 justify-center items-center">
+    </div>
+  </section>
+
+  <section id="searchbox" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Search
+    </h2>
+    <div class="px-5 py-4 border shadow ">
+      <input id="searchname" placeholder="Enter Name" type="text" class="border-2 border-blue-300 px-6 py-2  rounded focus:outline-2 focus:outline-blue-700 focus:border-none w-full" required>
+      <button id="searchbtn" class=" w-full bg-blue-300 px-4 py-1 border-2 border-black rounded-md hover:bg-yellow-700 font-thin tracking-wide mt-6">Search
+      </button>
+    </div>
+    <div class="overflow-auto">
+      <table class="scale-90 md:scale-100 mx-auto text-center border-collapse m-1 border-2 border-gray-500 rounded">
+        <thead class="bg-black text-white font-bold uppercase">
+          <tr>
+            <th class="px-2 py-1 border">Roll Number</th>
+            <th class="px-2 py-1 border">Name</th>
+            <th class="px-2 py-1 border">Department</th>
+            <th class="px-2 py-1 border">CGPA</th>
+            <th class="px-2 py-1 border">Result</th>
+            <th class="px-2 py-1 border">action</th>
+          </tr>
+        </thead>
+        <tbody id="searchtable">
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="notices" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Notices
+    </h2>
+    <div class="p-1">
+      <ul class="list-disc">
+        <li class="px-2 py-0.5 mt-2 text-xs">📢 Semester Results have been published.</li>
+        <li class="px-2 py-0.5 mt-2 text-xs">📅 Revaluation applications are open until 20 July 2026.</li>
+        <li class="px-2 py-0.5 mt-2 text-xs">📝 Hall Tickets for Supplementary Exams are now available.</li>
+        <li class="px-2 py-0.5 mt-2 text-xs">📚 New semester classes begin on 25 July 2026.</li>
+        <li class="px-2 py-0.5 mt-2 text-xs">🎉 Annual Sports Meet will be held on 30 July 2026.</li>
+        <li class="px-2 py-0.5 mt-2 text-xs">📄 Scholarship verification documents must be submitted before 18 July 2026.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faqs" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Frequently Asked Questions
+    </h2>
+    <div class="space-y-4">
+
+      <details class="border rounded-lg shadow p-4 hover:shadow-lg transition">
+        <summary class="font-semibold">
+          How can I check my result?
+        </summary>
+        <p class="text-gray-600 mt-2">
+          Enter your roll number in the search box to view your result instantly.
+        </p>
+      </details>
+
+      <details class="border rounded-lg shadow p-4 hover:shadow-lg transition">
+        <summary class="font-semibold">
+          Can I edit my student details?
+        </summary>
+        <p class="text-gray-600 mt-2">
+          Yes. Click the Edit button, update the details, and then click Update Student.
+        </p>
+      </details>
+
+      <details class="border rounded-lg shadow p-4 hover:shadow-lg transition">
+        <summary class="font-semibold">
+          Is my data saved after refreshing the page?
+        </summary>
+        <p class="text-gray-600 mt-2">
+          Yes. The project uses Local Storage, so your data remains available even after refreshing the page.arate hostels are available for boys and girls.
+        </p>
+      </details>
+
+      <details class="border rounded-lg shadow p-4 hover:shadow-lg transition">
+        <summary class="font-semibold">
+          What is the Pass percentage?
+        </summary>
+        <p class="text-gray-600 mt-2">
+          Around 85% of eligible students are passed every year.
+        </p>
+      </details>
+
+      <details class="border rounded-lg shadow p-4 hover:shadow-lg transition">
+        <summary class="font-semibold">What is the minimum CGPA to appear in the Top Students section?</summary>
+        <p class="text-gray-600 mt-2">
+          Students with a CGPA of 9.0 or above are displayed in the Top Students section.
+        </p>
+      </details>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="m-4 px-3 py-8  rounded border border-gray-100 shadow-sm bg-white">
+    <h2 class="text-xl md:text-3xl font-medium text-center uppercase mb-6">
+      Contact
+    </h2>
+    <div class="flex flex-col justify-center items-center gap-4">
+      <span>
+        <a href="tel:+91 8142059849">&#128222;</a>
+      </span>
+      <span>
+        <a href="sms:+91 8142059849">💬</a>
+      </span>
+      <span>
+        <a href="mailto:asanthosh1356@gmail.com">&#128231;</a>
+      </span>
+    </div>
+
+  </section>
+
+  <section id="footer" class="w-screen bg-black text-center text-white text-xs">
+    © 2026 Santhosh
+    Built with HTML, Tailwind CSS & Vanilla JavaScript
+  </section>
+
+</body>
+<script src="script.js"></script>
+</html>
