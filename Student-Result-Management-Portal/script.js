@@ -76,7 +76,7 @@ function displaystudents(data) {
     `
     <div  class="w-56 h-80 md:w-56 md:h-80 p-2 border-2 border-black rounded-sm overflow-auto shadow-md hover:shadow-xl hover:scale-105 transition duration-300 text-center flex flex-col justify-center items-center">
     <div class=" rounded-full overflow-hidden">
-    <img src="sandy.jpg" class="w-full h-full object-cover">
+    <img src="images/sandy.jpg" class="w-full h-full object-cover">
     </div>
     <h3 class="font-bold text-lg">${name}</h3>
     <p class="font-mono">
@@ -113,7 +113,7 @@ function displaytoppers() {
     `
     <div  class="w-56 h-80 md:w-56 md:h-80 p-2 border-2 border-black rounded-sm overflow-auto shadow-md hover:shadow-xl hover:scale-105 transition duration-300 text-center flex flex-col justify-center items-center bg-blue-300">
     <div class="w-18 h-18 rounded-full border-4 border-black overflow-hidden">
-    <img src="sandy.jpg" class="w-full h-full object-cover">
+    <img src="images/sandy.jpg" class="w-full h-full object-cover">
     </div>
     <h3 class="font-bold text-lg">${name}</h3>
     <p class="font-mono">
